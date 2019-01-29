@@ -2,7 +2,10 @@ const test = QUnit.test;
 
 function fizzBuzz(num) {
 
-    if(num % 9 === 0 && num % 4 === 0) {
+    if(num === 100) {
+        return 'YOU ARE SO SPECIAL';
+    }
+    else if(num % 9 === 0 && num % 4 === 0) {
         return num + ' fizzbuzz';
     }
     else if(num % 9 === 0) {
@@ -16,15 +19,22 @@ function fizzBuzz(num) {
     }
 }
 
+test('if num is 100, return YOU ARE SO SPECIAL', function(assert) {
+    let num = 100;
+    let result = fizzBuzz(num);
+    assert.equal(result, 'YOU ARE SO SPECIAL');
+});
 
 test('if divisible by 9 return number and fizz', function(assert) {
-    let result = fizzBuzz(9);
-    assert.equal(result, '9 fizz');
+    let num = 9;
+    let result = fizzBuzz(num);
+    assert.equal(result, num + ' fizz');
 });
 
 test('if divisible by 4 return number and buzz', function(assert) {
-    let result = fizzBuzz(4);
-    assert.equal(result, '4 buzz');
+    let num = 4; 
+    let result = fizzBuzz(num);
+    assert.equal(result, num + ' buzz');
 });
 
 test('if not divisible by 9 or 4, return number', function(assert) {
