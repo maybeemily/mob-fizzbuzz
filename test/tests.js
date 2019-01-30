@@ -22,34 +22,42 @@ function fizzBuzz(num) {
     }
 }
 
+let num = 72;
+
 test('if num is 100, return YOU ARE SO SPECIAL', function(assert) {
-    let num = 100;
+   // let num = 100;
     let result = fizzBuzz(num);
+    console.log(result);
     assert.equal(result, 'YOU ARE SO SPECIAL');
 });
 
 test('if divisible by 9 return number and fizz', function(assert) {
-    let num = 9;
+   // let num = 18;
     let result = fizzBuzz(num);
+    console.log(result);
     assert.equal(result, num + ' ' + fizz);
 });
 
 test('if divisible by 4 return number and buzz', function(assert) {
-    let num = 4; 
+   // let num = 4; 
     let result = fizzBuzz(num);
+    console.log(result);
     assert.equal(result, num + ' ' + buzz);
 });
 
 test('if not divisible by 9 or 4, return number', function(assert) {
-    let num = 5;
+    //let num = 5;
     let result = fizzBuzz(num);
+    console.log(result);
     assert.equal(result, num);
 });
 
 test('if divisible by 4 and 9, return number and fizzbuzz', function(assert) {
-    let num = 36;
+    //let num = 36;
     let result = fizzBuzz(num);
     assert.equal(result, num + ' ' + fizz + buzz);
+    console.log(result);
+
 });
 
 
